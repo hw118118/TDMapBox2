@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">TDMapBox2</string>、
+    <string name="bottom_tab_map">地图</string>
+    <string name="bottom_tab_know">附近</string>
+    <string name="bottom_tab_wantknow">路线</string>
+    <string name="iv_bus">公交</string>
+    <string name="bottom_tab_my">我的</string>
+    <string name="accessToken">pk.eyJ1IjoiaGdpcyIsImEiOiJjaXpnbGNwNGcwMTRpMzJtZzF2MjB3NWQ2In0.VyXDwQ4s6BQhHfq2pQA04w</string>
+    <string name="username">登陆/注册</string>
+    <string name="check_update">检查更新</string>
+    <string name="about">关于</string>
+    <string name="loginout">退出登录</string>
+    <string name="downloadmap">离线地图</string>
+    <string name="feed_back">请写下您遇到的问题，我们会认真处理</string>
+    <!--离线地图-->
+    <string name="download_button_text">下载</string>
+    <string name="list_button_text">列表</string>
+    <string name="set_region_name_hint">输入名称</string>
+    <string name="dialog_title">新建离线区域</string>
+    <string name="dialog_message">下载当前的可视区域</string>
+    <string name="dialog_positive_button">下载</string>
+    <string name="dialog_toast">区域名称不能为空</string>
+    <string name="dialog_negative_button">取消</string>
+    <string name="end_progress_success">下载完成</string>
+    <string name="toast_no_regions_yet">尚未下载离线地图</string>
+    <string name="navigate_title">列表</string>
+    <string name="navigate_positive_button">查看</string>
+    <string name="navigate_neutral_button_title">删除</string>
+    <string name="toast_region_deleted">区域删除</string>
+    <string name="navigate_negative_button_title">取消</string>
+    <string name="region_name">区域 %1$d</string>
+
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="title_activity_route">RouteActivity</string>
+
+</resources>

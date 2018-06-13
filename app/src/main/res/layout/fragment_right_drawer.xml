@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hgis.tdmapbox2.com.ul.MenuDrawerFragment"
+    >
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/left_top_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:background="@drawable/side_nav_bar"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:srcCompat="@android:drawable/sym_def_app_icon"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Android Studio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="android.studio@android.com"
+            android:id="@+id/textView" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mml_loginout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cdcdcd" />
+
+        <TextView
+            android:id="@+id/mml_setting_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_menu_setting"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="设置"
+
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/baseGrayLit"
+            />
+
+        <TextView
+            android:id="@+id/mml_feedback_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_menu_feedback"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="反馈"
+
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/baseGrayLit"
+            />
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_about_me"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="@string/about"
+
+            android:textSize="15sp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/baseGrayLit"
+            />
+        <TextView
+            android:id="@+id/mml_checkupdate_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_menu_check_update"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="@string/check_update"
+
+            android:textSize="15sp"
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/baseGrayLit"
+            />
+        <TextView
+            android:id="@+id/offlinemap_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_menu_map_offline"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="@string/downloadmap"
+
+            android:textSize="15sp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/baseGrayLit"
+            />
+        <TextView
+            android:id="@+id/loginout_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/icon_menu_logoout"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="@string/loginout"
+
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+</LinearLayout>

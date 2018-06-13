@@ -1,0 +1,31 @@
+{
+    "version": 8,
+    "sources": {
+        "basemap": {
+            "type": "raster",
+            "tiles": [
+                "http://t0.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}"
+            ],
+            "tileSize": 256
+        },
+        "annotation": {
+            "type": "raster",
+            "tiles": [
+                "http://t0.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}"
+            ],
+            "tileSize": 256
+        }
+    },
+    "layers": [
+        {
+            "id": "map",
+            "type": "raster",
+            "source": "basemap"
+        },
+        {
+            "id": "an",
+            "type": "raster",
+            "source": "annotation"
+        }
+    ]
+}

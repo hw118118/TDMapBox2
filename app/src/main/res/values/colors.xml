@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="topbar_bg">#ff157efb</color>
+    <color name="bottomtab_normal">#c8bca5</color>
+    <color name="bottomtab_press">#8b572a</color>
+    <color name="line">#c8bca5</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_white">#FFFFFF</color>
+    <!-- 标题强调文字-->
+    <color name="baseGrayMore">#464646</color>
+    <!-- 正文主要文字-->
+    <color name="baseGrayNor">#656565</color>
+
+    <color name="baseGrayLit">#cdcdcd</color>
+
+    <color name="light_red">#f6a6c1</color>
+    <color name="graywhite">#EFF1F3</color>
+    <color name="zoomline">#8b8f8f</color>
+    <color name="text_hint">#6C6C6C</color>
+    <color name="nav">#B60391FF</color>
+    <color name="nav_border">#ff79acfb</color>
+    <!--POI检索-->
+    <color name="grey"> #ebebeb</color>
+    <color name="welcome">#ff157efb</color>
+</resources>

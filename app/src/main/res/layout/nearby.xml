@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    >
+    <RelativeLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="#F0F0F0">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/nearby_back" />
+        <SearchView
+            android:id="@+id/nearby_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/nearby"
+            >
+        </SearchView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/tv_food"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/food_selector"
+                    android:gravity="center"
+                    android:text="美食"
+                    android:textColor="@color/baseGrayMore"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_hotel"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/hotel_selector"
+                    android:gravity="center"
+                    android:text="酒店"
+                    android:textColor="@color/baseGrayMore"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_bus"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/bus_selector"
+                    android:gravity="center"
+                    android:text="公交站"
+                    android:textColor="@color/baseGrayMore"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_bank"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/bank_selector"
+                    android:gravity="center"
+                    android:text="银行"
+                    android:textColor="@color/baseGrayMore"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_scene"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/scene_selector"
+                    android:gravity="center"
+                    android:text="景点"
+                    android:textColor="@color/baseGrayMore"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_gas"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/gasstation_selector"
+                    android:gravity="center"
+                    android:text="加油站"
+                    android:textColor="@color/baseGrayMore"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/more_selector"
+                    android:gravity="center"
+                    android:text="更多"
+                    android:textColor="@color/baseGrayMore"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,3858 @@
+{"version": 8,
+  "sources": {
+    "composite": {
+      "url": "mapbox://mapbox.mapbox-terrain-v2",
+      "type": "vector"
+    },
+    "deqing": {
+      "type": "vector",
+      "scheme": "tms",
+      "tiles": [
+        "http://112.124.97.99:8088/geoserver/gwc/service/tms/1.0.0/deqing%3Adeqing9layers@deqing@pbf/{z}/{x}/{y}.pbf"
+      ]
+    }
+  },
+  "sprite": "mapbox://sprites/ht1234/cj0gh9g5v008u2rn4bzgf90r3",
+  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "layout": {},
+      "paint": {
+        "background-color": "white"
+      },
+      "interactive": true
+    },
+    {
+      "id": "bou_py",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "BOU_PY",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6401000500"
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "hsl(55, 11%, 96%)",
+        "fill-opacity":1
+      }
+    },
+    {
+      "id": "hillshade_highlight_bright",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "maxzoom": 16,
+      "filter": [
+        "==", "level", 94
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "#fff",
+        "fill-opacity": {
+          "stops": [
+            [14, 0.08], [16, 0]
+          ]
+        },
+        "fill-antialias": false
+      },
+      "interactive": true
+    },
+    {
+      "id": "hillshade_highlight_med",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "maxzoom": 16,
+      "filter": [
+        "==", "level", 90
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "#fff",
+        "fill-opacity": {
+          "stops": [[14, 0.08], [16, 0]]
+        },
+        "fill-antialias": false
+      },
+      "interactive": true
+    },
+    {
+      "id": "hillshade_shadow_faint",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "maxzoom": 16,
+      "filter": [
+        "==", "level", 89
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(0, 0%, 35%)",
+        "fill-opacity": {
+          "stops": [[14, 0.033], [16, 0]]
+        },
+        "fill-antialias": false
+      },
+      "interactive": true
+    },
+    {
+      "id": "hillshade_shadow_med",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "maxzoom": 16,
+      "filter": [
+        "==", "level", 78
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(0, 0%, 35%)",
+        "fill-opacity": {
+          "stops": [[14, 0.033], [16, 0]]
+        },
+        "fill-antialias": false
+      },
+      "interactive": true
+    },
+    {
+      "id": "hillshade_shadow_dark",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "maxzoom": 16,
+      "filter": [
+        "==", "level", 67
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(0, 0%, 35%)",
+        "fill-opacity": {
+          "stops": [[14, 0.06],[16, 0]]
+        },
+        "fill-antialias": false
+      },
+      "interactive": true
+    },
+    {
+      "id": "hillshade_shadow_extreme",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "hillshade",
+      "maxzoom": 16,
+      "filter": [
+        "==", "level", 56
+      ],
+      "layout": {},
+      "paint": {
+        "fill-color": "hsl(0, 0%, 35%)",
+        "fill-opacity": {
+          "stops": [[14, 0.06], [16, 0]]
+        },
+        "fill-antialias": false
+      },
+      "interactive": true
+    },
+    {
+      "id": "hyd_py_pond_19",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 19,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_pond_18",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 18,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",18]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_pond_17",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_pond_16",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_pond_15",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301020500"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_river_19",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 19,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",18]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_river_17",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_river_15",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_river_13",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",12],
+        [">=","Shape_Area", 5e-005]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_river_10",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2101010500"],
+        ["<=","FSCALE",11],
+        [">=","Shape_Area", 5e-005]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_lake",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2301010500"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_reservoir_16",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2401010500"],
+        ["<=","FSCALE",16],
+        [">=","Shape_Area", 1e-006]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_reservoir_15",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2401010500"],
+        ["<=","FSCALE",15],
+        [">=","Shape_Area", 1e-006]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_reservoir_7",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2401010500"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "hyd_py_canal",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2201000500"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#A5BFDD"
+      }
+    },
+    {
+      "id": "res_py_17",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "RES_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "3103011500","3404010500","3104000500","3105000500","3105010500","3106000500","3108000500","3109000500"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#E3E3D9"
+      }
+    },
+    {
+      "id": "res_py_16",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "RES_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "3103011500","3404010500","3104000500","3105000500","3105010500","3106000500"],
+        [">","Shape_Area",3e-008],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#E3E3D9"
+      }
+    },
+    {
+      "id": "veg_py_paterre_18",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 18,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",18]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#C9DFAF"
+      }
+    },
+    {
+      "id": "veg_py_paterre_17",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#C9DFAF"
+      }
+    },
+    {
+      "id": "veg_py_paterre_16",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#C9DFAF"
+      }
+    },
+    {
+      "id": "veg_py_paterre_15",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",15],
+        [">","Shape_Area",3e-008]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#C9DFAF"
+      }
+    },
+    {
+      "id": "veg_py_paterre_14",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in","FCODE","8202000500"],
+        ["<=","FSCALE",14],
+        [">","Shape_Area",3e-008]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#C9DFAF"
+      }
+    },
+    {
+      "id": "veg_py_greenland",
+      "type": "fill",
+      "source": "deqing",
+      "source-layer": "VEG_PY",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in","FCODE","8201000500"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-color": "#C9DFAF"
+      }
+    },
+    {
+      "id": "res_py_3D",
+      "type": "fill-extrusion",
+      "source": "deqing",
+      "source-layer": "RES_PY",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "3103011500","3404010500","3104000500","3105000500","3105010500","3106000500","3108000500","3109000500"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "fill-extrusion-color": "#aaa",
+        "fill-extrusion-height": {
+          "type": "identity",
+          "property": "FLOOR"
+        },
+        "fill-extrusion-opacity":0.6
+      }
+    },
+    {
+      "id": "bou_town",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "BOU_LN",
+      "minzoom": 11,
+      "filter": [
+        "==",
+        "FCODE",
+        "6602011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#B5B5B5",
+        "line-width": 1,
+        "line-dasharray": [4, 4]
+      }
+    },
+    {
+      "id": "tra_lrr_ln_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_LRR_LN",
+      "minzoom": 9,
+      "filter": [
+        "in",
+        "FCODE",
+        "4101020314", "4101010314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#828282",
+        "line-width": 4
+      }
+    },
+    {
+      "id": "tra_lrr_ln",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_LRR_LN",
+      "minzoom": 9,
+      "filter": [
+        "in",
+        "FCODE",
+        "4101020314", "4101010314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "white",
+        "line-width": 2,
+        "line-dasharray": [5, 5]
+      }
+    },
+    {
+      "id": "road_village_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4204000313"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#cfcdca",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_internal_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4306000313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#cfcdca",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [12, 0.5], [13, 1], [14, 4], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_ramp_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4206000313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#cfcdca",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_tertiary_16_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#cfcdca",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_tertiary_15_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#cfcdca",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_country_13_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_country_12_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_17_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_16_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_15_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_14_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_13_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_16_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_15_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_14_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_13_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_12_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_11_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_provincial_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4202010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [8, 1.5], [20, 17]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_national_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "any",
+        ["in", "FCODE", "4201010313"],
+        ["in", "FCODE2", "4201010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#e9ac77",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [5, 0.4], [6, 0.6], [7, 1.5], [20, 22]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_village",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4204000313"],
+        ["<=","FSCALE",17]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_internal",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4306000313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [13.5, 0], [14, 2.5], [20, 9.5]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_ramp",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4206000313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fff",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_tertiary_16",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#FFFFD2",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_tertiary_15",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#FFFFD2",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_country_13",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_country_12",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_17",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_16",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_15",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_14",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_secondary_13",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_16",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_15",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_14",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_13",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_12",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_11",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_provincial",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4202010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [8, 0.5], [20, 13]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_national",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "any",
+        ["in", "FCODE", "4201010313"],
+        ["in", "FCODE2", "4201010313"]
+      ],
+      "layout": {},
+      "paint": {
+        "line-color": "#fea",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [7, 0.5], [20, 18]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_motorway_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4200010313"]
+      ],
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round",
+        "visibility": "visible"
+      },
+      "paint": {
+        "line-color": "#C47112",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [5, 0.4], [6, 0.6], [7, 1.5], [20, 22]
+          ]
+        },
+        "line-opacity": 1
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_motorway",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4200010313"]
+      ],
+      "layout": {
+      },
+      "paint": {
+        "line-color": "#FFB829",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [6.5, 0], [7, 0.5], [20, 18]
+          ]
+        }
+      },
+      "interactive": true
+    },
+    {
+      "id": "bou_city_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["==", "FCODE", "6402011314"]
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(29, 12%, 86%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 9], [15, 16]
+          ]
+        },
+        "line-offset":-2
+      }
+    },
+    {
+      "id": "bou_country_casing",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6502011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(29, 12%, 86%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 9], [15, 16]
+          ]
+        },
+        "line-offset":-2
+      }
+    },
+    {
+      "id": "bou_city",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6402011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(37, 21%, 47%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 4], [15, 9]
+          ]
+        }
+      }
+    },
+    {
+      "id": "bou_country",
+      "type": "line",
+      "source": "deqing",
+      "source-layer": "BOU_LN1",
+      "minzoom": 8,
+      "filter": [
+        "==", "FCODE", "6502011314"
+      ],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "hsl(37, 21%, 47%)",
+        "line-width": {
+          "base": 1,
+          "stops": [
+            [10, 4], [15, 9]
+          ]
+        }
+      }
+    },
+    {
+      "id": "tra_net_ln_shield2",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"],
+        ["!=", "ROADCODE", ""]
+      ],
+      "layout": {
+        "text-field": "{ROADCODE}",
+        "icon-image": "default-4",
+        "text-size": 11,
+        "symbol-placement": "line",
+        "symbol-spacing": 500
+      },
+      "paint": {},
+      "interactive": true
+    },
+    {
+      "id": "tra_net_ln_shield1",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4200010313", "4201010313", "4202010313"],
+        ["!=", "ROADCODE", ""]
+      ],
+      "layout": {
+        "text-field": "{ROADCODE}",
+        "icon-image": "default-4",
+        "text-size": 11,
+        "symbol-placement": {
+          "base": 1,
+          "stops": [
+            [10, "point"], [11, "line"]
+          ]
+        },
+        "symbol-spacing": 500
+      },
+      "paint": {},
+      "interactive": true
+    },
+    {
+      "id": "hyd_py_lake_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2301010500"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-max-width": 5,
+        "text-size": 11,
+        "symbol-spacing": 1000
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      },
+      "interactive": true
+    },
+    {
+      "id": "hyd_py_reservoir_16_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE",  "2401010500"],
+        ["<=","FSCALE",16],
+        [">=","Shape_Area", 1e-006]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-max-width": 5,
+        "text-size": 11,
+        "symbol-spacing": 1000
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      },
+      "interactive": true
+    },
+    {
+      "id": "hyd_py_reservoir_7_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "HYD_PY",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in", "FCODE", "2401010500"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": 12,
+        "text-padding": 4
+      },
+      "paint": {
+        "text-color": "#74aee9",
+        "text-halo-width": 1.5,
+        "text-halo-color": "rgba(255,255,255,0.7)"
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_zhaodaisuo",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "120104"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [15, "lodging-11"],
+            [16, "lodging-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_liansuojiudian",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "1201013"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [15, "lodging-11"],
+            [16, "lodging-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_yaodian",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "150406"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "pharmacy-11"],
+            [15, "pharmacy-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_jiuba",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "140310"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "bar-11"],
+            [15, "bar-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_gongce",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160603"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "toilet-11"],
+            [15, "toilet-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_qiche",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "170701", "170702", "170703", "170704"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "car-11"],
+            [15, "car-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_gejuyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "140302"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "theatre-11"],
+            [15, "theatre-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_kafei",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "140311"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "cafe-11"],
+            [15, "cafe-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_xicanguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "120202", "120203"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "restaurant-11"],
+            [15, "restaurant-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 10,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_zhongcanguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "120201"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "restaurant-11"],
+            [15, "restaurant-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 10,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_gouwu",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "150301", "150302", "150303", "150304", "150305", "150306"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "shop-11"],
+            [15, "shop-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_youzheng",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160402"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "post-11"],
+            [15, "post-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_yinhang",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160501"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "bank-11"],
+            [15, "bank-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_tushuguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "140101"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "library-11"],
+            [15, "library-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_jiayouzhan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "170501"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "fuel-11"],
+            [15, "fuel-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_haiguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "110501"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [15, "ferry-11"],
+            [16, "ferry-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "hsl(230, 48%, 44%)",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_sifajiguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "110302", "110303", "110304", "110305"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "police-11"],
+            [15, "police-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_dianyinyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "140301"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "cinema-11"],
+            [15, "cinema-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_dongwuyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "130102"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "zoo-11"],
+            [15, "zoo-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#268000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_bowuguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "140102"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "museum-11"],
+            [15, "museum-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_jijiuzhongxin",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160303"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "hospital-11"],
+            [15, "hospital-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#B35071",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_zhuankeyiyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160302"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "hospital-11"],
+            [15, "hospital-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#B35071",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_zongheyiyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160301"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "hospital-11"],
+            [15, "hospital-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#B35071",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_gouwuzhongxin",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "150101"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "grocery-11"],
+            [15, "grocery-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_tiyuguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "140201"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "stadium-11"],
+            [15, "stadium-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_binguan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "120101","120102"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [15, "lodging-11"],
+            [16, "lodging-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_gonganju",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "110301"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "police-11"],
+            [15, "police-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_primary_school",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160103"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "school-11"],
+            [15, "school-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#8C7700",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_middle_school",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160102"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "school-11"],
+            [15, "school-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#8C7700",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_gaodengjiaoyu",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "160101"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "college-11"],
+            [15, "college-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#8c7700",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_fengjing",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "130201","130202","130201"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "garden-11"],
+            [15, "garden-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#268000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_loupan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "100201","100202"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [15, "town-hall-11"],
+            [17, "town-hall-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 10,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_zhiwuyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "130103"]
+      ],
+      "layout": {
+        "icon-image": "park-11",
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#268000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_gongyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in", "FCODE", "130101"]
+      ],
+      "layout": {
+        "icon-image": "park-11",
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#268000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_lingyuan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "130301"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "monument-11"],
+            [15, "monument-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "#735139",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_changtuqiche",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "170104"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "bus-11"],
+            [15, "bus-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "hsl(230, 48%, 44%)",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "PIO_huochezhan",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "POI",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in", "FCODE", "170102"]
+      ],
+      "layout": {
+        "icon-image": {
+          "stops": [
+            [14, "rail-11"],
+            [15, "rail-15"]
+          ]
+        },
+        "text-field": "{NAME}",
+        "text-anchor": "left",
+        "text-padding": 2,
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [14, 12], [20, 15]
+          ]
+        },
+        "text-offset": [0.6, 0],
+        "text-justify":"left"
+      },
+      "paint": {
+        "text-color": "hsl(230, 48%, 44%)",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_internal_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 18,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4306000313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_tertiary_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305030313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_country_13_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_country_12_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4203010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_seconday_17_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 17,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_seconday_16_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",16]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_seconday_15_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_seconday_14_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_seconday_13_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305020313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_16_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_15_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 15,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",15]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_14_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 14,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",14]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_13_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 13,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",13]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_12_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 12,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",12]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_primary_11_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4305010313"],
+        ["<=","FSCALE",11]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_provincial_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4202010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [12, 12], [18,18]
+          ]
+        },
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_national_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4201010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [11, 13], [19, 20]
+          ]
+        },
+        "text-letter-spacing":0.5,
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "road_motorway_label",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "TRA_NET_LN",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["in", "FCODE", "4200010313"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1,
+          "stops": [
+            [11, 13], [19, 20]
+          ]
+        },
+        "text-letter-spacing":0.5,
+        "symbol-placement": "line"
+      },
+      "paint": {
+        "text-color": "#666",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1,
+        "text-halo-blur": 0.5
+      },
+      "interactive": true
+    },
+    {
+      "id": "place_label_village",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "RES_PT",
+      "minzoom": 16,
+      "filter": [
+        "all",
+        ["==", "FCODE", "3101080106"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1.2,
+          "stops": [[10, 10], [15, 18]]
+        }
+      },
+      "paint": {
+        "text-color": "#737316",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
+      },
+      "interactive": true
+    },
+    {
+      "id": "place_label_town",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "RES_PT",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["in", "FCODE", "3111050106"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1.2,
+          "stops": [[9, 13], [16, 20]]
+        }
+      },
+      "paint": {
+        "text-color": "#333",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
+      },
+      "interactive": true
+    },
+    {
+      "id": "place_label_city",
+      "type": "symbol",
+      "source": "deqing",
+      "source-layer": "RES_PT",
+      "minzoom": 9,
+      "filter": [
+        "all",
+        ["==", "FCODE", "3111040106"]
+      ],
+      "layout": {
+        "text-field": "{FNAME}",
+        "text-size": {
+          "base": 1.2,
+          "stops": [[8, 14], [13, 20]]
+        },
+        "text-padding":2
+      },
+      "paint": {
+        "text-color": "black",
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
+      },
+      "interactive": true
+    }
+  ]
+}
